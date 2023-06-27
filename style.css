@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
+}
+
+table td,
+th {
+  color: #fff;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: rgb(34, 110, 147);
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(34, 110, 147, 1) 0%,
+    rgba(32, 93, 133, 1) 21%,
+    rgba(23, 42, 89, 1) 71%,
+    rgba(25, 29, 82, 1) 100%
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to left,
+    rgba(34, 110, 147, 1) 0%,
+    rgba(32, 93, 133, 1) 21%,
+    rgba(23, 42, 89, 1) 71%,
+    rgba(25, 29, 82, 1) 100%
+  );
+}
+
+/* loading dots */
+
+.loading:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: white;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
+  }
+}
+
+nav {
+  background: #181745;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #eee;
+}
+
+.myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 8px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  padding-left: 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-top: 12px; /* Add some space above the input */
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+#match-list .search-result {
+  cursor: pointer;
+  border-radius: 0;
+  padding: 5px;
+  padding-top: 10px;
+  z-index: 300;
+}
+
+.card {
+  transition: transform 0.2s ease-in;
+}
+
+.card .card-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(
+    1.03
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.default {
+  border: none;
+  background: #212529;
+}
+
+.chart-default {
+  padding: 0;
+  border: none;
+  background: #fff;
+  height: 100px;
+}
+
+.confirmed-case {
+  /* background: #fff3cd; */
+  background: #fff3cd;
+  border: #fff3cd;
+  font-weight: 500;
+}
+
+.active-case {
+  background: #f8d7da;
+  border: #f8d7da;
+  font-weight: 500;
+}
+
+.recovered-case {
+  background: #d1e7dd;
+  border: #d1e7dd;
+  font-weight: 500;
+}
+
+.died-case {
+  background: #e9ecef;
+  border: #e9ecef;
+  font-weight: 500;
+}
+
+#match-list .search-result:hover {
+  transform: scale(1);
+}
